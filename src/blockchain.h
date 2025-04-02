@@ -1,6 +1,8 @@
 #ifndef BLOCKCHAIN_H
 #define BLOCKCHAIN_H
 
+#include "wallet.h"  // Necessario per definire Wallet
+
 typedef struct Transaction {
     char* sender;
     char* receiver;

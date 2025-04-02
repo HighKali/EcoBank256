@@ -66,13 +66,9 @@ include CMakeFiles/version.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/version.dir/progress.make
 
-CMakeFiles/version:
-	cd /data/data/com.termux/files/home/EcoBank256 && /data/data/com.termux/files/usr/bin/cmake -D VERSION=0.1 -D GIT=/data/data/com.termux/files/usr/bin/git -D TO=/data/data/com.termux/files/home/EcoBank256/build/version/version.h -P /data/data/com.termux/files/home/EcoBank256/src/version.cmake
-
 CMakeFiles/version.dir/codegen:
 .PHONY : CMakeFiles/version.dir/codegen
 
-version: CMakeFiles/version
 version: CMakeFiles/version.dir/build.make
 .PHONY : version
 

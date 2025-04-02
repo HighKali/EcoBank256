@@ -9,15 +9,12 @@ set(CMAKE_SUPPRESS_REGENERATION ON)
 
 project(EcoBank256)
 
-# Directory di inclusione
-include_directories(include "${CMAKE_CURRENT_BINARY_DIR}/version")
+include_directories(src "${CMAKE_CURRENT_BINARY_DIR}/version")
 
-# Configurazioni specifiche per Termux/Linux
 if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
   add_definitions("-D_DEFAULT_SOURCE -D_GNU_SOURCE")
 endif()
 
-# Flag di compilazione
 set(ARCH native CACHE STRING "CPU to build for: -march value or default")
 if("${ARCH}" STREQUAL "default")
   set(ARCH_FLAG "")
@@ -32,7 +29,6 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c11 ${WARNINGS} ${C_WARNINGS} ${ARCH_FL
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 ${WARNINGS} ${CXX_WARNINGS} ${ARCH_FLAG} -pthread")
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -pthread")
 
-# Flag di debug e release
 set(DEBUG_FLAGS "-g3 -O0 -fno-omit-frame-pointer")
 set(RELEASE_FLAGS "-Ofast -DNDEBUG -Wno-unused-variable")
 set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} ${DEBUG_FLAGS}")
@@ -40,7 +36,6 @@ set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} ${DEBUG_FLAGS}")
 set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} ${RELEASE_FLAGS}")
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} ${RELEASE_FLAGS}")
 
-# Configurazione Boost
 set(BOOST_ROOT "/data/data/com.termux/files/usr")
 find_package(Boost 1.55 REQUIRED COMPONENTS system filesystem date_time chrono regex serialization program_options)
 if(Boost_FOUND)
@@ -50,31 +45,20 @@ else()
 endif()
 include_directories(SYSTEM ${Boost_INCLUDE_DIRS})
 
-# Configurazione OpenSSL per AES-256
 find_package(OpenSSL REQUIRED)
 include_directories(${OPENSSL_INCLUDE_DIR})
 set(LIBS ${Boost_LIBRARIES} ${OPENSSL_LIBRARIES})
 
-# Gestione della versione
-set(COMMIT_ID_IN_VERSION ON CACHE BOOL "Include commit ID in version")
+set(VERSION "${VERSION}-unknown")
 file(MAKE_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/version")
-if(NOT COMMIT_ID_IN_VERSION)
-  set(VERSION "${VERSION}-unknown")
-  configure_file("${CMAKE_CURRENT_SOURCE_DIR}/src/version.h.in" "${CMAKE_CURRENT_BINARY_DIR}/version/version.h" @ONLY)
-  add_custom_target(version ALL)
-else()
-  find_package(Git QUIET)
-  if(GIT_FOUND)
-    message(STATUS "Found Git: ${GIT_EXECUTABLE}")
-    add_custom_target(version ALL "${CMAKE_COMMAND}" "-D" "VERSION=${VERSION}" "-D" "GIT=${GIT_EXECUTABLE}" "-D" "TO=${CMAKE_CURRENT_BINARY_DIR}/version/version.h" "-P" "${CMAKE_CURRENT_SOURCE_DIR}/src/version.cmake" WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}")
-  else()
-    message(STATUS "WARNING: Git was not found!")
-    set(VERSION "${VERSION}-unknown")
-    configure_file("${CMAKE_CURRENT_SOURCE_DIR}/src/version.h.in" "${CMAKE_CURRENT_BINARY_DIR}/version/version.h" @ONLY)
-    add_custom_target(version ALL)
-  endif()
-endif()
+configure_file("${CMAKE_CURRENT_SOURCE_DIR}/src/version.h.in" "${CMAKE_CURRENT_BINARY_DIR}/version/version.h" @ONLY)
+add_custom_target(version ALL)
 
-# File sorgente
-add_executable(ecobank256d main.c)
+add_executable(ecobank256d 
+  src/main.c 
+  src/blockchain.c 
+  src/wallet.c 
+  src/mixing.c 
+  src/cli.c
+)
 target_link_libraries(ecobank256d ${LIBS})

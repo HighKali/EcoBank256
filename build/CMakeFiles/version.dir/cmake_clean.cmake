@@ -1,6 +1,3 @@
-file(REMOVE_RECURSE
-  "CMakeFiles/version"
-)
 
 # Per-language clean rules from dependency scanning.
 foreach(lang )

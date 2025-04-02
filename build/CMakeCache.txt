@@ -243,9 +243,6 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//Include commit ID in version
-COMMIT_ID_IN_VERSION:BOOL=ON
-
 //Value Computed by CMake
 EcoBank256_BINARY_DIR:STATIC=/data/data/com.termux/files/home/EcoBank256/build
 
@@ -254,9 +251,6 @@ EcoBank256_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 EcoBank256_SOURCE_DIR:STATIC=/data/data/com.termux/files/home/EcoBank256
-
-//Git command line client
-GIT_EXECUTABLE:FILEPATH=/data/data/com.termux/files/usr/bin/git
 
 //Path to a library.
 OPENSSL_CRYPTO_LIBRARY:FILEPATH=/data/data/com.termux/files/usr/lib/libcrypto.so
@@ -466,8 +460,6 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/data/data/com.termux/files/usr/lib/cmake/Boost-1.87.0/BoostConfig.cmake][cfound components: system filesystem date_time chrono regex serialization program_options ][v1.87.0(1.55)]
 //Details about finding OpenSSL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[/data/data/com.termux/files/usr/lib/libcrypto.so][/data/data/com.termux/files/usr/include][c ][v3.4.1()]
-//ADVANCED property for variable: GIT_EXECUTABLE
-GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENSSL_CRYPTO_LIBRARY
 OPENSSL_CRYPTO_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENSSL_INCLUDE_DIR

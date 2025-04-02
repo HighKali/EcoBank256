@@ -120,12 +120,12 @@ CMakeFiles/version.dir/clean:
 CMakeFiles/ecobank256d.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecobank256d.dir/build.make CMakeFiles/ecobank256d.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecobank256d.dir/build.make CMakeFiles/ecobank256d.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/EcoBank256/build/CMakeFiles --progress-num=1,2 "Built target ecobank256d"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/EcoBank256/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target ecobank256d"
 .PHONY : CMakeFiles/ecobank256d.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ecobank256d.dir/rule:
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/EcoBank256/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/EcoBank256/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ecobank256d.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/EcoBank256/build/CMakeFiles 0
 .PHONY : CMakeFiles/ecobank256d.dir/rule
@@ -137,7 +137,7 @@ ecobank256d: CMakeFiles/ecobank256d.dir/rule
 # codegen rule for target.
 CMakeFiles/ecobank256d.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecobank256d.dir/build.make CMakeFiles/ecobank256d.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/EcoBank256/build/CMakeFiles --progress-num=1,2 "Finished codegen for target ecobank256d"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/EcoBank256/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Finished codegen for target ecobank256d"
 .PHONY : CMakeFiles/ecobank256d.dir/codegen
 
 # clean rule for target.

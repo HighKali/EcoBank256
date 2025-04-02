@@ -1,6 +1,7 @@
 #ifndef ECOBANK256_VERSION_H
 #define ECOBANK256_VERSION_H
 
-#define ECOBANK256_VERSION "0.1-g4c374b1"
+#define ECOBANK256_VERSION "0.1-unknown"
 
 #endif
+

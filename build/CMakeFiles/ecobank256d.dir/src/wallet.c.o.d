@@ -1,12 +1,15 @@
-CMakeFiles/ecobank256d.dir/main.c.o: \
-  /data/data/com.termux/files/home/EcoBank256/main.c \
-  /data/data/com.termux/files/usr/include/stdio.h \
+CMakeFiles/ecobank256d.dir/src/wallet.c.o: \
+  /data/data/com.termux/files/home/EcoBank256/src/wallet.c \
+  /data/data/com.termux/files/usr/include/stdlib.h \
+  /data/data/com.termux/files/usr/include/alloca.h \
   /data/data/com.termux/files/usr/include/sys/cdefs.h \
   /data/data/com.termux/files/usr/include/android/versioning.h \
   /data/data/com.termux/files/usr/include/android/api-level.h \
   /data/data/com.termux/files/usr/include/bits/get_device_api_level_inlines.h \
   /data/data/com.termux/files/usr/include/android/ndk-version.h \
-  /data/data/com.termux/files/usr/include/sys/types.h \
+  /data/data/com.termux/files/usr/include/bits/wait.h \
+  /data/data/com.termux/files/usr/include/linux/wait.h \
+  /data/data/com.termux/files/usr/include/malloc.h \
   /data/data/com.termux/files/usr/lib/clang/19/include/stddef.h \
   /data/data/com.termux/files/usr/lib/clang/19/include/__stddef_header_macro.h \
   /data/data/com.termux/files/usr/lib/clang/19/include/__stddef_ptrdiff_t.h \
@@ -15,6 +18,8 @@ CMakeFiles/ecobank256d.dir/main.c.o: \
   /data/data/com.termux/files/usr/lib/clang/19/include/__stddef_null.h \
   /data/data/com.termux/files/usr/lib/clang/19/include/__stddef_max_align_t.h \
   /data/data/com.termux/files/usr/lib/clang/19/include/__stddef_offsetof.h \
+  /data/data/com.termux/files/usr/include/stdio.h \
+  /data/data/com.termux/files/usr/include/sys/types.h \
   /data/data/com.termux/files/usr/lib/clang/19/include/stdint.h \
   /data/data/com.termux/files/usr/include/stdint.h \
   /data/data/com.termux/files/usr/include/bits/wchar_limits.h \
@@ -46,8 +51,5 @@ CMakeFiles/ecobank256d.dir/main.c.o: \
   /data/data/com.termux/files/usr/include/bits/flock64.h \
   /data/data/com.termux/files/usr/include/bits/flock.h \
   /data/data/com.termux/files/usr/include/bits/seek_constants.h \
-  /data/data/com.termux/files/usr/include/openssl/aes.h \
-  /data/data/com.termux/files/usr/include/openssl/macros.h \
-  /data/data/com.termux/files/usr/include/openssl/opensslconf.h \
-  /data/data/com.termux/files/usr/include/openssl/configuration.h \
-  /data/data/com.termux/files/usr/include/openssl/opensslv.h
+  /data/data/com.termux/files/usr/include/android/legacy_stdlib_inlines.h \
+  /data/data/com.termux/files/home/EcoBank256/src/wallet.h

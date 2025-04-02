@@ -1,7 +1,0 @@
-#ifndef ECOBANK256_VERSION_H
-#define ECOBANK256_VERSION_H
-
-#define ECOBANK256_VERSION "@VERSION@"
-
-#endif
-

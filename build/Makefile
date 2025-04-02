@@ -137,29 +137,125 @@ ecobank256d/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecobank256d.dir/build.make CMakeFiles/ecobank256d.dir/build
 .PHONY : ecobank256d/fast
 
-main.o: main.c.o
-.PHONY : main.o
+src/blockchain.o: src/blockchain.c.o
+.PHONY : src/blockchain.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecobank256d.dir/build.make CMakeFiles/ecobank256d.dir/main.c.o
-.PHONY : main.c.o
+src/blockchain.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecobank256d.dir/build.make CMakeFiles/ecobank256d.dir/src/blockchain.c.o
+.PHONY : src/blockchain.c.o
 
-main.i: main.c.i
-.PHONY : main.i
+src/blockchain.i: src/blockchain.c.i
+.PHONY : src/blockchain.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecobank256d.dir/build.make CMakeFiles/ecobank256d.dir/main.c.i
-.PHONY : main.c.i
+src/blockchain.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecobank256d.dir/build.make CMakeFiles/ecobank256d.dir/src/blockchain.c.i
+.PHONY : src/blockchain.c.i
 
-main.s: main.c.s
-.PHONY : main.s
+src/blockchain.s: src/blockchain.c.s
+.PHONY : src/blockchain.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecobank256d.dir/build.make CMakeFiles/ecobank256d.dir/main.c.s
-.PHONY : main.c.s
+src/blockchain.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecobank256d.dir/build.make CMakeFiles/ecobank256d.dir/src/blockchain.c.s
+.PHONY : src/blockchain.c.s
+
+src/cli.o: src/cli.c.o
+.PHONY : src/cli.o
+
+# target to build an object file
+src/cli.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecobank256d.dir/build.make CMakeFiles/ecobank256d.dir/src/cli.c.o
+.PHONY : src/cli.c.o
+
+src/cli.i: src/cli.c.i
+.PHONY : src/cli.i
+
+# target to preprocess a source file
+src/cli.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecobank256d.dir/build.make CMakeFiles/ecobank256d.dir/src/cli.c.i
+.PHONY : src/cli.c.i
+
+src/cli.s: src/cli.c.s
+.PHONY : src/cli.s
+
+# target to generate assembly for a file
+src/cli.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecobank256d.dir/build.make CMakeFiles/ecobank256d.dir/src/cli.c.s
+.PHONY : src/cli.c.s
+
+src/main.o: src/main.c.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecobank256d.dir/build.make CMakeFiles/ecobank256d.dir/src/main.c.o
+.PHONY : src/main.c.o
+
+src/main.i: src/main.c.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecobank256d.dir/build.make CMakeFiles/ecobank256d.dir/src/main.c.i
+.PHONY : src/main.c.i
+
+src/main.s: src/main.c.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecobank256d.dir/build.make CMakeFiles/ecobank256d.dir/src/main.c.s
+.PHONY : src/main.c.s
+
+src/mixing.o: src/mixing.c.o
+.PHONY : src/mixing.o
+
+# target to build an object file
+src/mixing.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecobank256d.dir/build.make CMakeFiles/ecobank256d.dir/src/mixing.c.o
+.PHONY : src/mixing.c.o
+
+src/mixing.i: src/mixing.c.i
+.PHONY : src/mixing.i
+
+# target to preprocess a source file
+src/mixing.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecobank256d.dir/build.make CMakeFiles/ecobank256d.dir/src/mixing.c.i
+.PHONY : src/mixing.c.i
+
+src/mixing.s: src/mixing.c.s
+.PHONY : src/mixing.s
+
+# target to generate assembly for a file
+src/mixing.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecobank256d.dir/build.make CMakeFiles/ecobank256d.dir/src/mixing.c.s
+.PHONY : src/mixing.c.s
+
+src/wallet.o: src/wallet.c.o
+.PHONY : src/wallet.o
+
+# target to build an object file
+src/wallet.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecobank256d.dir/build.make CMakeFiles/ecobank256d.dir/src/wallet.c.o
+.PHONY : src/wallet.c.o
+
+src/wallet.i: src/wallet.c.i
+.PHONY : src/wallet.i
+
+# target to preprocess a source file
+src/wallet.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecobank256d.dir/build.make CMakeFiles/ecobank256d.dir/src/wallet.c.i
+.PHONY : src/wallet.c.i
+
+src/wallet.s: src/wallet.c.s
+.PHONY : src/wallet.s
+
+# target to generate assembly for a file
+src/wallet.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecobank256d.dir/build.make CMakeFiles/ecobank256d.dir/src/wallet.c.s
+.PHONY : src/wallet.c.s
 
 # Help Target
 help:
@@ -170,9 +266,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... version"
 	@echo "... ecobank256d"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/blockchain.o"
+	@echo "... src/blockchain.i"
+	@echo "... src/blockchain.s"
+	@echo "... src/cli.o"
+	@echo "... src/cli.i"
+	@echo "... src/cli.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/mixing.o"
+	@echo "... src/mixing.i"
+	@echo "... src/mixing.s"
+	@echo "... src/wallet.o"
+	@echo "... src/wallet.i"
+	@echo "... src/wallet.s"
 .PHONY : help
 
 
