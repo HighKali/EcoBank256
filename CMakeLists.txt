@@ -61,7 +61,7 @@ add_executable(ecobank256d
   src/cli.c
   src/network.c
   src/mining.c
-  src/account.c  # Nuovo file per gli account
-  src/address.c  # Nuovo file per gli indirizzi
+  src/account.c
+  src/address.c
 )
 target_link_libraries(ecobank256d ${LIBS})
