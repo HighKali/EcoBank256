@@ -267,6 +267,9 @@ PKG_CONFIG_ARGN:STRING=
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/data/data/com.termux/files/usr/bin/pkg-config
 
+//The directory containing a CMake configuration file for boost_asio.
+boost_asio_DIR:PATH=boost_asio_DIR-NOTFOUND
+
 //The directory containing a CMake configuration file for boost_atomic.
 boost_atomic_DIR:PATH=/data/data/com.termux/files/usr/lib/cmake/boost_atomic-1.87.0
 
