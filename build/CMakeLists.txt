@@ -10,7 +10,7 @@ set(CMAKE_SUPPRESS_REGENERATION ON)
 project(EcoBank256)
 
 # Directory di inclusione
-include_directories(include "${CMAKE_CURRENT_BINARY_DIR}/version")
+include_directories(src "${CMAKE_CURRENT_BINARY_DIR}/version")
 
 # Configurazioni specifiche per Termux/Linux
 if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
@@ -55,26 +55,18 @@ find_package(OpenSSL REQUIRED)
 include_directories(${OPENSSL_INCLUDE_DIR})
 set(LIBS ${Boost_LIBRARIES} ${OPENSSL_LIBRARIES})
 
-# Gestione della versione
-set(COMMIT_ID_IN_VERSION ON CACHE BOOL "Include commit ID in version")
+# Gestione della versione (semplificata)
+set(VERSION "${VERSION}-unknown")
 file(MAKE_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/version")
-if(NOT COMMIT_ID_IN_VERSION)
-  set(VERSION "${VERSION}-unknown")
-  configure_file("${CMAKE_CURRENT_SOURCE_DIR}/src/version.h.in" "${CMAKE_CURRENT_BINARY_DIR}/version/version.h" @ONLY)
-  add_custom_target(version ALL)
-else()
-  find_package(Git QUIET)
-  if(GIT_FOUND)
-    message(STATUS "Found Git: ${GIT_EXECUTABLE}")
-    add_custom_target(version ALL "${CMAKE_COMMAND}" "-D" "VERSION=${VERSION}" "-D" "GIT=${GIT_EXECUTABLE}" "-D" "TO=${CMAKE_CURRENT_BINARY_DIR}/version/version.h" "-P" "${CMAKE_CURRENT_SOURCE_DIR}/src/version.cmake" WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}")
-  else()
-    message(STATUS "WARNING: Git was not found!")
-    set(VERSION "${VERSION}-unknown")
-    configure_file("${CMAKE_CURRENT_SOURCE_DIR}/src/version.h.in" "${CMAKE_CURRENT_BINARY_DIR}/version/version.h" @ONLY)
-    add_custom_target(version ALL)
-  endif()
-endif()
+configure_file("${CMAKE_CURRENT_SOURCE_DIR}/src/version.h.in" "${CMAKE_CURRENT_BINARY_DIR}/version/version.h" @ONLY)
+add_custom_target(version ALL)
 
 # File sorgente
-add_executable(ecobank256d main.c)
+add_executable(ecobank256d 
+  src/main.c 
+  src/blockchain.c 
+  src/wallet.c 
+  src/mixing.c 
+  src/cli.c
+)
 target_link_libraries(ecobank256d ${LIBS})
