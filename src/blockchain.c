@@ -51,3 +51,4 @@ void blockchain_free(Blockchain* bc) {
     free(bc->transactions);
     free(bc);
 }
+

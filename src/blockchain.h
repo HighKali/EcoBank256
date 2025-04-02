@@ -1,7 +1,7 @@
 #ifndef BLOCKCHAIN_H
 #define BLOCKCHAIN_H
 
-#include "wallet.h"  // Necessario per definire Wallet
+#include "wallet.h"  // Corretto: include wallet.h
 
 typedef struct Transaction {
     char* sender;
@@ -23,3 +23,4 @@ void blockchain_free(Blockchain* bc);
 Transaction* transaction_create(Wallet* sender, const char* receiver, double amount);
 
 #endif
+

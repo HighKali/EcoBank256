@@ -4,4 +4,3 @@
 #define ECOBANK256_VERSION "0.1-unknown"
 
 #endif
-

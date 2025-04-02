@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "cli.h"
+#include "mixing.h"  // Corretto: include mixing.h
 
 void cli_run(Blockchain* bc, Wallet* wallet) {
     char command[256];

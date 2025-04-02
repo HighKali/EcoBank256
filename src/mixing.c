@@ -8,4 +8,3 @@ void mix_transaction(Transaction* tx) {
     free(original_sender);
     printf("Transazione mixata: %.2f EBK da %s a %s\n", tx->amount, tx->sender, tx->receiver);
 }
-

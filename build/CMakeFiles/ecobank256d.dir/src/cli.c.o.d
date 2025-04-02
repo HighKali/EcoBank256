@@ -48,4 +48,5 @@ CMakeFiles/ecobank256d.dir/src/cli.c.o: \
   /data/data/com.termux/files/usr/include/bits/seek_constants.h \
   /data/data/com.termux/files/home/EcoBank256/src/cli.h \
   /data/data/com.termux/files/home/EcoBank256/src/blockchain.h \
-  /data/data/com.termux/files/home/EcoBank256/src/wallet.h
+  /data/data/com.termux/files/home/EcoBank256/src/wallet.h \
+  /data/data/com.termux/files/home/EcoBank256/src/mixing.h
