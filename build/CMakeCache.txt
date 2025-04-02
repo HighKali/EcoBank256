@@ -17,25 +17,8 @@
 //CPU to build for: -march value or default
 ARCH:STRING=native
 
-Boost_CHRONO_LIBRARY_RELEASE:STRING=/data/data/com.termux/files/usr/lib/libboost_chrono.so
-
-Boost_DATE_TIME_LIBRARY_RELEASE:STRING=/data/data/com.termux/files/usr/lib/libboost_date_time.so
-
 //The directory containing a CMake configuration file for Boost.
 Boost_DIR:PATH=/data/data/com.termux/files/usr/lib/cmake/Boost-1.87.0
-
-Boost_FILESYSTEM_LIBRARY_RELEASE:STRING=/data/data/com.termux/files/usr/lib/libboost_filesystem.so
-
-//Path to a file.
-Boost_INCLUDE_DIR:PATH=Boost_INCLUDE_DIR-NOTFOUND
-
-Boost_PROGRAM_OPTIONS_LIBRARY_RELEASE:STRING=/data/data/com.termux/files/usr/lib/libboost_program_options.so
-
-Boost_REGEX_LIBRARY_RELEASE:STRING=/data/data/com.termux/files/usr/lib/libboost_regex.so
-
-Boost_SERIALIZATION_LIBRARY_RELEASE:STRING=/data/data/com.termux/files/usr/lib/libboost_serialization.so
-
-Boost_SYSTEM_LIBRARY_RELEASE:STRING=/data/data/com.termux/files/usr/lib/libboost_system.so
 
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/data/data/com.termux/files/usr/bin/llvm-addr2line
@@ -252,21 +235,6 @@ EcoBank256_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 EcoBank256_SOURCE_DIR:STATIC=/data/data/com.termux/files/home/EcoBank256
 
-//Path to a library.
-OPENSSL_CRYPTO_LIBRARY:FILEPATH=/data/data/com.termux/files/usr/lib/libcrypto.so
-
-//Path to a file.
-OPENSSL_INCLUDE_DIR:PATH=/data/data/com.termux/files/usr/include
-
-//Path to a library.
-OPENSSL_SSL_LIBRARY:FILEPATH=/data/data/com.termux/files/usr/lib/libssl.so
-
-//Arguments to supply to pkg-config
-PKG_CONFIG_ARGN:STRING=
-
-//pkg-config executable
-PKG_CONFIG_EXECUTABLE:FILEPATH=/data/data/com.termux/files/usr/bin/pkg-config
-
 //The directory containing a CMake configuration file for boost_asio.
 boost_asio_DIR:PATH=boost_asio_DIR-NOTFOUND
 
@@ -297,19 +265,11 @@ boost_serialization_DIR:PATH=/data/data/com.termux/files/usr/lib/cmake/boost_ser
 //The directory containing a CMake configuration file for boost_system.
 boost_system_DIR:PATH=/data/data/com.termux/files/usr/lib/cmake/boost_system-1.87.0
 
-//Path to a library.
-pkgcfg_lib__OPENSSL_crypto:FILEPATH=/data/data/com.termux/files/usr/lib/libcrypto.so
-
-//Path to a library.
-pkgcfg_lib__OPENSSL_ssl:FILEPATH=/data/data/com.termux/files/usr/lib/libssl.so
-
 
 ########################
 # INTERNAL cache entries
 ########################
 
-//ADVANCED property for variable: Boost_DIR
-Boost_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -459,63 +419,12 @@ CMAKE_TAPI-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/data/data/com.termux/files/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
-//Details about finding Boost
-FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/data/data/com.termux/files/usr/lib/cmake/Boost-1.87.0/BoostConfig.cmake][cfound components: system filesystem date_time chrono regex serialization program_options ][v1.87.0(1.55)]
-//Details about finding OpenSSL
-FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[/data/data/com.termux/files/usr/lib/libcrypto.so][/data/data/com.termux/files/usr/include][c ][v3.4.1()]
-//ADVANCED property for variable: OPENSSL_CRYPTO_LIBRARY
-OPENSSL_CRYPTO_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OPENSSL_INCLUDE_DIR
-OPENSSL_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OPENSSL_SSL_LIBRARY
-OPENSSL_SSL_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PKG_CONFIG_ARGN
-PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
-PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //linker supports push/pop state
 _CMAKE_CXX_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 //linker supports push/pop state
 _CMAKE_C_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
-_OPENSSL_CFLAGS:INTERNAL=-I/data/data/com.termux/files/usr/include
-_OPENSSL_CFLAGS_I:INTERNAL=
-_OPENSSL_CFLAGS_OTHER:INTERNAL=
-_OPENSSL_FOUND:INTERNAL=1
-_OPENSSL_INCLUDEDIR:INTERNAL=/data/data/com.termux/files/usr/include
-_OPENSSL_INCLUDE_DIRS:INTERNAL=/data/data/com.termux/files/usr/include
-_OPENSSL_LDFLAGS:INTERNAL=-L/data/data/com.termux/files/usr/lib;-lssl;-lcrypto
-_OPENSSL_LDFLAGS_OTHER:INTERNAL=
-_OPENSSL_LIBDIR:INTERNAL=/data/data/com.termux/files/usr/lib
-_OPENSSL_LIBRARIES:INTERNAL=ssl;crypto
-_OPENSSL_LIBRARY_DIRS:INTERNAL=/data/data/com.termux/files/usr/lib
-_OPENSSL_LIBS:INTERNAL=
-_OPENSSL_LIBS_L:INTERNAL=
-_OPENSSL_LIBS_OTHER:INTERNAL=
-_OPENSSL_LIBS_PATHS:INTERNAL=
-_OPENSSL_MODULE_NAME:INTERNAL=openssl
-_OPENSSL_PREFIX:INTERNAL=/data/data/com.termux/files/usr
-_OPENSSL_STATIC_CFLAGS:INTERNAL=-I/data/data/com.termux/files/usr/include
-_OPENSSL_STATIC_CFLAGS_I:INTERNAL=
-_OPENSSL_STATIC_CFLAGS_OTHER:INTERNAL=
-_OPENSSL_STATIC_INCLUDE_DIRS:INTERNAL=/data/data/com.termux/files/usr/include
-_OPENSSL_STATIC_LDFLAGS:INTERNAL=-L/data/data/com.termux/files/usr/lib;-lssl;-lcrypto;-ldl;-pthread
-_OPENSSL_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread
-_OPENSSL_STATIC_LIBDIR:INTERNAL=
-_OPENSSL_STATIC_LIBRARIES:INTERNAL=ssl;crypto;dl
-_OPENSSL_STATIC_LIBRARY_DIRS:INTERNAL=/data/data/com.termux/files/usr/lib
-_OPENSSL_STATIC_LIBS:INTERNAL=
-_OPENSSL_STATIC_LIBS_L:INTERNAL=
-_OPENSSL_STATIC_LIBS_OTHER:INTERNAL=
-_OPENSSL_STATIC_LIBS_PATHS:INTERNAL=
-_OPENSSL_VERSION:INTERNAL=3.4.1
-_OPENSSL_openssl_INCLUDEDIR:INTERNAL=
-_OPENSSL_openssl_LIBDIR:INTERNAL=
-_OPENSSL_openssl_PREFIX:INTERNAL=
-_OPENSSL_openssl_VERSION:INTERNAL=
-__pkg_config_arguments__OPENSSL:INTERNAL=QUIET;openssl
-__pkg_config_checked__OPENSSL:INTERNAL=1
 //ADVANCED property for variable: boost_atomic_DIR
 boost_atomic_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: boost_chrono_DIR
@@ -534,9 +443,4 @@ boost_regex_DIR-ADVANCED:INTERNAL=1
 boost_serialization_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: boost_system_DIR
 boost_system_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib__OPENSSL_crypto
-pkgcfg_lib__OPENSSL_crypto-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib__OPENSSL_ssl
-pkgcfg_lib__OPENSSL_ssl-ADVANCED:INTERNAL=1
-prefix_result:INTERNAL=/data/data/com.termux/files/usr/lib
 

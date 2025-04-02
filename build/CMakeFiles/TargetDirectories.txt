@@ -1,4 +1,0 @@
-/data/data/com.termux/files/home/EcoBank256/build/CMakeFiles/version.dir
-/data/data/com.termux/files/home/EcoBank256/build/CMakeFiles/ecobank256d.dir
-/data/data/com.termux/files/home/EcoBank256/build/CMakeFiles/edit_cache.dir
-/data/data/com.termux/files/home/EcoBank256/build/CMakeFiles/rebuild_cache.dir

@@ -59,7 +59,9 @@ add_executable(ecobank256d
   src/wallet.c 
   src/mixing.c 
   src/cli.c
-  src/network.c  # Nuovo file per la rete P2P
-  src/mining.c   # Nuovo file per il mining
+  src/network.c
+  src/mining.c
+  src/account.c  # Nuovo file per gli account
+  src/address.c  # Nuovo file per gli indirizzi
 )
 target_link_libraries(ecobank256d ${LIBS})
